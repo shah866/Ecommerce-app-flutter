@@ -33,6 +33,9 @@ class FormFields extends StatelessWidget {
           controller: titleController,
           decoration: const InputDecoration(labelText: 'Title'),
           validator: (val) => val == null || val.isEmpty ? 'Required' : null,
+          onChanged: (value) {
+    print('User typed in title: $value');
+  },
         ),
         const SizedBox(height: 16),
         TextFormField(
@@ -44,18 +47,27 @@ class FormFields extends StatelessWidget {
                   val == null || double.tryParse(val) == null
                       ? 'Enter valid price'
                       : null,
+                      onChanged: (value) {
+    print('User typed in price: $value');
+  },
         ),
         const SizedBox(height: 16),
         TextFormField(
           controller: descriptionController,
           decoration: const InputDecoration(labelText: 'Description'),
           validator: (val) => val == null || val.isEmpty ? 'Required' : null,
+          onChanged: (value) {
+    print('User typed in description: $value');
+  },
         ),
         const SizedBox(height: 16),
         TextFormField(
           controller: imageController,
           decoration: const InputDecoration(labelText: 'Image URL'),
           validator: (val) => val == null || val.isEmpty ? 'Required' : null,
+          onChanged: (value) {
+    print('User added in image: $value');
+  },
         ),
         const SizedBox(height: 16),
 

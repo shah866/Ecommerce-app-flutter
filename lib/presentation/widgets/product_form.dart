@@ -81,8 +81,14 @@ class _ProductFormState extends State<ProductForm> {
             imageController: _imageController,
            
             selectedCategoryId: _selectedCategoryId,
-            onCategoryChanged:
-                (val) => _selectedCategoryId = val,
+          //   onCategoryChanged:
+            
+          //       (val) => _selectedCategoryId = val,
+          // ),
+          onCategoryChanged: (val) {
+  print('User selected category ID: $val');
+  _selectedCategoryId = val;
+},
           ),
           const SizedBox(height: 24),
           SizedBox(

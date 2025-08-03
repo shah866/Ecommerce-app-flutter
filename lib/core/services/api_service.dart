@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:ecommerce_app/presentation/cubit/product_list_cubit/product_cubit.dart';
 
+import 'package:ecommerce_app/core/errors/custom_exception.dart';
 class ApiService {
   ApiService._internal()
     : _dio = Dio(

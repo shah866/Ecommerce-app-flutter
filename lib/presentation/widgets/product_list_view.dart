@@ -51,6 +51,7 @@ class ProductListView extends StatelessWidget {
                   return ProductCard(
                     product: product,
                     onEdit: () {
+                      print('Edit button pressed for ${product.title}');
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -63,6 +64,7 @@ class ProductListView extends StatelessWidget {
                                   ),
                                 ],
                                 child: EditProductPage(product: product),
+                                
                               ),
                         ),
                       ).then((value) {
@@ -84,6 +86,7 @@ class ProductListView extends StatelessWidget {
         backgroundColor: const Color(0xFFD0E4FF),
 
         onPressed: () {
+            print('add button pressed ');
           Navigator.push(
             context,
             MaterialPageRoute(
